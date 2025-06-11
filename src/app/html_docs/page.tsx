@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Search, ChevronUp, ExternalLink, BookOpen } from "lucide-react";
 import { tagSections } from "../../../public/tagData.js";
+import Link from "next/link";
 
 interface TagInfo {
   tag: string;
@@ -55,14 +56,16 @@ const HTML5TagReference = () => {
       <header className='bg-white shadow-sm border-b sticky top-0 z-50'>
         <div className='max-w-6xl mx-auto px-4 py-4'>
           <div className='flex items-center gap-4 mb-4'>
-            <div>
-              <h1 className='text-2xl md:text-3xl font-bold text-gray-900'>
-                HTML5タグリファレンス
-              </h1>
-              <p className='text-gray-600 text-sm md:text-base'>
-                HTMLタグとプロパティの完全リスト
-              </p>
-            </div>
+            <Link href='/' className='hover:opacity-80 transition-opacity'>
+              <div>
+                <h1 className='text-2xl md:text-3xl font-bold text-gray-900'>
+                  HTML5タグリファレンス
+                </h1>
+                <p className='text-gray-600 text-sm md:text-base'>
+                  HTMLタグとプロパティの完全リスト
+                </p>
+              </div>
+            </Link>
           </div>
 
           {/* 検索バー */}
